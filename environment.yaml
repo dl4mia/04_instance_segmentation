@@ -1,4 +1,4 @@
-name: 03_instance
+name: 04_instance_segmentation
 channels:
   - defaults
   - nvidia

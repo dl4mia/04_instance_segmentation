@@ -31,7 +31,9 @@ From within the same terminal in your browser, create a `conda` environment for 
 
 
 ```
-conda env create -f environment.yaml
+conda env create -f https://raw.githubusercontent.com/CSBDeep/CSBDeep/master/extras/environment-gpu-py3.8-tf2.4.yml
+conda activate csbdeep
+pip install stardist scikit-image
 ```
 
 Test whether tensorflow and stardist was properly installed and run the following in a fresh notebook:
@@ -62,6 +64,7 @@ A simple *semantic* segmentation pipeline for 2D images using a good old UNet ne
 
 A *instance* segmentation pipeline for 2D images using a stardist 2D network. The data consists of fluorescently labeled nuclei, which are typically quite roundish thus rendering this approach suitable. 
 
-### `3_instance_segmentation_3D.ipynb.ipynb`
+
+### `3_instance_segmentation_3D.ipynb.ipynb`
 
 A *instance* segmentation pipeline for 3D images using a stardist 3D network. The data consists of synthetically created nuclei.
