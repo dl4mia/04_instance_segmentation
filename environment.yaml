@@ -1,21 +1,17 @@
-name: 04_instance_segmentation
+name: instance
 channels:
   - defaults
   - nvidia
 dependencies:
-  - python=3.9
-  - tensorflow-gpu
-  - jupyter
+  - python=3.7
+  - cudatoolkit=10.1.*
+  - cudnn=7.6.*
   - numpy
   - scikit-image
-  - scikit-learn
-  - pandas
-  - scipy
-  - seaborn
-  - tqdm
-  - ipython
+  - jupyter
   - pip
   - pip:
+    - tensorflow==2.3.*
     - csbdeep
     - stardist
     - gputools
