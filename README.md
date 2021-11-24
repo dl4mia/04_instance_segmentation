@@ -33,7 +33,6 @@ From within the same terminal in your browser, create a `conda` environment for 
 ```
 conda env create -f https://raw.githubusercontent.com/CSBDeep/CSBDeep/master/extras/environment-gpu-py3.8-tf2.4.yml
 pip install stardist scikit-image
-conda install quick_demo
 ```
 
 Test whether tensorflow and stardist was properly installed and run the following in a fresh notebook:
