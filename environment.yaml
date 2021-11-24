@@ -4,11 +4,9 @@ channels:
   - nvidia
 dependencies:
   - python=3.9
-  - cudatoolkit=11.0.*
-  - cudnn=8.0.*
+  - tensorflow-gpu
   - jupyter
   - numpy
-  - pytorch
   - scikit-image
   - scikit-learn
   - pandas
@@ -16,13 +14,9 @@ dependencies:
   - seaborn
   - tqdm
   - ipython
-  - tensorboard
-  - torchvision
   - pip
   - pip:
-    - tensorflow==2.7
     - csbdeep
     - stardist
-    - cellpose
     - gputools
-    - napari[all]
+    - git+https://github.com/stardist/augmend.git
