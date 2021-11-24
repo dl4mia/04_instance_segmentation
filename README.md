@@ -32,6 +32,7 @@ From within the same terminal in your browser, create a `conda` environment for 
 
 ```
 conda env create -f https://raw.githubusercontent.com/CSBDeep/CSBDeep/master/extras/environment-gpu-py3.8-tf2.4.yml
+conda activate csbdeep
 pip install stardist scikit-image
 ```
 
