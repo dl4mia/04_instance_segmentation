@@ -23,6 +23,7 @@ dependencies:
     - tensorflow==2.7
     - csbdeep
     - stardist
+    - stardist-napari
     - cellpose
     - gputools
     - napari[all]

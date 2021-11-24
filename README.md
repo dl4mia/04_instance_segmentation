@@ -38,9 +38,30 @@ Test whether tensorflow and stardist was properly installed and run the followin
 
 ```
 import tensorflow as tf
-print(tf.test.is_gpu_available())
-
 import stardist 
+
+print(tf.test.is_gpu_available())
+res = tf.keras.layers.Conv2D(1,(3,3))(tf.zeros((1,100,100,1)))
+
 ```
 
 Now navigate to the exercise folder we cloned just before and start with the exercises! 
+
+
+## Exercises
+
+
+In the folder you will find 3 different notebooks that demonstrate a DL based segmentation workflows of increasing complexity. Please also note the questions/exercises (<span style="background-color:lightblue">marked by blue back ground</span>) that you should discuss with your fellow course members.   
+
+#### `1_semantic_segmentation_2D.ipynb` 
+
+A simple *semantic* segmentation pipeline for 2D images using a good old UNet network. Always a good starting point and a solid baseline to compare against when using more fancy tools! 
+
+
+#### `2_instance_segmentation_2D.ipynb.ipynb`
+
+A *instance* segmentation pipeline for 2D images using a stardist 2D network. The data consists of fluorescently labeled nuclei, which are typically quite roundish thus rendering this approach suitable. 
+
+### `3_instance_segmentation_3D.ipynb.ipynb`
+
+A *instance* segmentation pipeline for 3D images using a stardist 3D network. The data consists of synthetically created nuclei.
