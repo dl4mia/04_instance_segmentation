@@ -31,7 +31,7 @@ From within the same terminal in your browser, create a `conda` environment for 
 
 
 ```
-conda env create -f environment.yaml
+conda env create -f environment_real.yaml
 ```
 
 Test whether tensorflow and stardist was properly installed and run the following in a fresh notebook:
