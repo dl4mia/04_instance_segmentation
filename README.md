@@ -1,4 +1,4 @@
-# Exercise Session 3: Introduction to Instance Segmentation
+# Exercise Session 4: Introduction to Instance Segmentation
 
 ## Connect to your HT Jupyter instance...
 
@@ -21,7 +21,7 @@ localhost:8888
 In Jupyter...
 
 * Open a terminal window (inside the browser, from within Jupyter).
-* Clone this repository by writing `git clone https://github.com/dl4mia/03_instance_segmentation`.
+* Clone this repository by writing `git clone https://github.com/dl4mia/04_instance_segmentation`.
 * Navigate into the new folder, containing the envorinment setup and the exercises  
 
 
