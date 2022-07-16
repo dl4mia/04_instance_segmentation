@@ -5,6 +5,6 @@
 
 In this tutorial, we shall learn to use *StarDist* and *CellPose* to train a model for **2D** and **3D** instance segmentation on microscopy images.
 
-See **[this]()** document for installing `EmbedSeg` and the included exercises. 
+See **[this]()** document for installing the environments and running the included exercises. 
 
 **[Return to the Course's main page](https://tinyurl.com/7z8jxx2w)**
