@@ -5,6 +5,6 @@
 
 In this tutorial, we shall learn to use *StarDist* to train a model for **2D** and **3D** instance segmentation on microscopy images.
 
-See **[this](https://carbonated-tub-0d7.notion.site/Instance-Segmentation-with-StarDist-DL4MIA-22-7b4e471f0a6142b69d16e7b90831b1ee)** document for installing the environments and running the included exercises. 
+See **[this](https://carbonated-tub-0d7.notion.site/Instance-Segmentation-with-StarDist-and-Cellpose-DL4MIA-22-2ec6d85d79904be6964f5ecf76e4f50a)** document for installing the environments and running the included exercises. 
 
 **[Return to the Course's main page](https://tinyurl.com/7z8jxx2w)**
