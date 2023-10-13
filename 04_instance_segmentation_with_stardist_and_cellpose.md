@@ -21,8 +21,7 @@ Open a fresh terminal window (click on *Activities* at top-left and select *Term
 cd DL4MIA
 conda create -y -n kerasEnv python=3.7
 conda activate kerasEnv
-conda install -c conda-forge tensorflow-gpu=2.6.0 jupyter
-pip install keras==2.6.* 
+pip install tensorflow-gpu==2.6.0 jupyter keras==2.6.* 
 pip install stardist CSBDeep gdown
 git clone https://github.com/dl4mia/04_instance_segmentation.git
 cd 04_instance_segmentation
