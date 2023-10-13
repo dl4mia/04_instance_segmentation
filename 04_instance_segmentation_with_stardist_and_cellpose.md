@@ -1,4 +1,6 @@
-# Instance Segmentation with StarDist and Cellpose(DL4MIA-22)
+# DL4MIA 2023: 04 - Instance Segmentation with StarDist and Cellpose
+
+**[Return to the Welcome page](https://tinyurl.com/33y2b2hk)**
 
 ### Goals
 
@@ -19,8 +21,9 @@ Open a fresh terminal window (click on *Activities* at top-left and select *Term
 cd DL4MIA
 conda create -y -n kerasEnv python=3.7
 conda activate kerasEnv
-conda install -c conda-forge tensorflow-gpu=2.6.0 keras jupyter
-pip install stardist CSBDeep
+conda install -c conda-forge tensorflow-gpu=2.6.0 jupyter
+pip install keras==2.6.* 
+pip install stardist CSBDeep gdown
 git clone https://github.com/dl4mia/04_instance_segmentation.git
 cd 04_instance_segmentation
 ```
@@ -42,13 +45,11 @@ Browse to the 3D exercise (*instance_segmentation_3D.ipynb*) in the browser.
 
 To use *Cellpose*, we run a couple of scripts (instead of going through a notebook!)
 
-First, let’s download a 2D data of interest - It is the same old `DSB-2018` dataset which we have used in the `U-Net` and `StarDist-2D` example notebooks.
-
-Open a fresh terminal window, change directory to `cellpose` and run `download_dsb-2018_data.py`. This downloads the images and masks to a directory named `data/dsb-2018/download`.
+First, let’s download a 2D data of interest. Open a fresh terminal window, change directory to `cellpose` and run `download_cellpose2D_data.py`. This downloads the images and masks to a directory named `data/cellpose_2D`.
 
 ```bash
 cd cellpose
-python3 download_dsb-2018_data.py
+python3 download_cellpose2D_data.py
 ```
 
 Next, let’s activate the environment `pytorchEnv` (which we created in the U-Net example and which already has a working installation of pytorch). And let’s install `cellpose` in it.
@@ -61,13 +62,13 @@ pip install cellpose
 Next, we train the model by first initializing to the pre-trained model weights (`--pretrained_model nuclei`).
 
 ```bash
-python -m cellpose --train --dir data/dsb-2018/download/train/ --pretrained_model nuclei --n_epochs 10 --img_filter _im --mask_filter _ma --use_gpu --verbose
+python -m cellpose --train --dir data/cellpose_2D/train/ --pretrained_model nuclei --n_epochs 10 --img_filter _img --mask_filter _masks --use_gpu --verbose
 ```
 
-Finally, let’s evaluate the result of the fine-tuned model on the test data. Adjust the path to the `pretrained_model` appropriately. (Hint: Look into the directory `data/dsb-2018/download/train/models`.)
+Finally, let’s evaluate the result of the fine-tuned model on the test data. Adjust the path to the `pretrained_model` appropriately. (Hint: Look into the directory `data/cellpose_2D/train/models/<right_file_name>`.)
 
 ```bash
-python -m cellpose --dir data/dsb-2018/download/test --pretrained_model data/dsb-2018/download/train/models/cellpose_residual_on_style_on_concatenation_off_train_2022_07_17_11_20_51.769254 --save_tif --use_gpu --verbose  --img_filter _im  --mask_filter _ma
+python -m cellpose --dir data/cellpose_2D/test --pretrained_model data/cellpose_2D/train/models/<right_file_name> --save_tif --use_gpu --verbose  --img_filter _img  --mask_filter _masks
 ```
 
 ### [4/4] Fine-tune a pre-trained *Cellpose* model on a 3D dataset for a few epochs
